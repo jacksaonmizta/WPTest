@@ -5,10 +5,11 @@
 		<title>Dynamic Table</title>
   </head>
   <body>
-  
-	  <form id="form1">
-	  Row: <input row="Row" type="text" size="20">
-	  </form>
+	  <h1 id="answer"></h1>
+	  Number 1<input type="text" id="num1">
+	  <br>
+	  <br>
+	  Number 2<input type="text" id="num2">
 	  
 	  <button onclick="outputRow()">Submit</button>
 	  
@@ -16,27 +17,30 @@
 	  <script>
 	  function outputRow(){
 	  
-	  var x,y,row;
-	  
-	  x=document.getElementbyId("form1);
-	  y=x.elements["rows"].value;
-	  
-		var table ='';
-		var cols=5;
-		for(var r =0; r<rows;r++)
-		{
-			table +='<tr>';
-				for(var c =0; c< cols;c++)
-				{
-					table+= '<td>'+c+'</td>';
-				
-				}
-			table +='</tr>';
-		}
+	 
 		
-		document.write('<table border= 2>'+ table+'</table>')
+	
+	  
+			var table ='';
+			var row=document.getElementById("num1").value;
+			var cols=document,getElementById("num2").value;
 		
-		}
+			for(var r =0; r<rows;r++)
+			{
+				table +='<tr>';
+					for(var c =0; c< cols;c++)
+					{
+						table+= '<td>'+c+'</td>';
+					
+					}
+				table +='</tr>';
+			}
+			
+			document.write('<table border= 2>'+ table+'</table>')
+			
+			}
+			
+		
 	  </script>
   
   </body>
