@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+  <html lang="en">
+  <head>
+		<meta charset="UTF-8">
+		<title>Dynamic Table</title>
+  </head>
+  <body>
+  
+	  <form id="form1">
+	  Row: <input row="Row" type="text" size="20">
+	  </form>
+	  
+	  <button onclick="outputRow()">Submit</button>
+	  
+	  
+	  <script>
+	  function outputRow(){
+	  
+	  var x,y,row;
+	  
+	  x=document.getElementbyId("form1);
+	  y=x.elements["rows"].value;
+	  
+		var table ='';
+		var cols=5;
+		for(var r =0; r<rows;r++)
+		{
+			table +='<tr>';
+				for(var c =0; c< cols;c++)
+				{
+					table+= '<td>'+c+'</td>';
+				
+				}
+			table +='</tr>';
+		}
+		
+		document.write('<table border= 2>'+ table+'</table>')
+		
+		}
+	  </script>
+  
+  </body>
+  </html>
